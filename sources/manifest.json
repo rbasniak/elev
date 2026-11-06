@@ -1,0 +1,344 @@
+[
+  {
+    "source": 0,
+    "chapter": 1,
+    "original": "1. Intro til logistikbegrebet.pptx",
+    "original_folder": "1. Logistik mål",
+    "asset": "sources/01-01.pptx",
+    "page": "logistik/01/01.html",
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=FD2ShcUtLkE",
+        "status": {
+          "da": "Åbnet; transskription læst og resumeret.",
+          "en": "Opened; transcript reviewed and summarised.",
+          "pt": "Aberto; transcrição lida e resumida."
+        }
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=smzGqoS-na8",
+        "status": {
+          "da": "Åbnet; transskription læst og resumeret.",
+          "en": "Opened; transcript reviewed and summarised.",
+          "pt": "Aberto; transcrição lida e resumida."
+        }
+      }
+    ],
+    "sha256": "e00beb357a94786f7174d8fe5e1f74c8ce0e497af9dc4983a49dc5c2ee031cf9",
+    "bytes": 5200159
+  },
+  {
+    "source": 1,
+    "chapter": 1,
+    "original": "2. træningsopgaver opgave 7 logistik mål.docx",
+    "original_folder": "1. Logistik mål",
+    "asset": "sources/01-02.docx",
+    "page": "logistik/01/02.html",
+    "links": [],
+    "sha256": "68fcc5a3e314f2ebdf2e641bafdce71d35213a7f73e3fd5e01d9cd727624c70d",
+    "bytes": 18503
+  },
+  {
+    "source": 2,
+    "chapter": 1,
+    "original": "3. Cases logistikmål.docx",
+    "original_folder": "1. Logistik mål",
+    "asset": "sources/01-03.docx",
+    "page": "logistik/01/03.html",
+    "links": [],
+    "sha256": "0c1ae7e2a94cf0cd1af7a3260f2311937374237c96accdc78f9e83ede420e153",
+    "bytes": 26140
+  },
+  {
+    "source": 3,
+    "chapter": 2,
+    "original": "1. logistisk effektivitet.pptx",
+    "original_folder": "2. Logistisk effektivitet",
+    "asset": "sources/02-01.pptx",
+    "page": "logistik/02/01.html",
+    "links": [],
+    "sha256": "1b98089e6942f12a86ba303977091296bf2fa132ffce2d62c6d236272330dfcf",
+    "bytes": 1038761
+  },
+  {
+    "source": 4,
+    "chapter": 2,
+    "original": "2. Opgave logistisk effektivitet.pdf",
+    "original_folder": "2. Logistisk effektivitet",
+    "asset": "sources/02-02.pdf",
+    "page": "logistik/02/02.html",
+    "links": [],
+    "sha256": "8c819be0f1f329435437bcb11b2f23c6c6c47a8fc8076c221d67b56a1aa5d2b5",
+    "bytes": 5052861
+  },
+  {
+    "source": 5,
+    "chapter": 2,
+    "original": "3. Opgave.txt",
+    "original_folder": "2. Logistisk effektivitet",
+    "asset": "sources/02-03.txt",
+    "page": "logistik/02/03.html",
+    "links": [],
+    "sha256": "e0bdeb29e2fdff70e11f9f46ca0933a5e35b51f0ee09cd7d870832c7d53ec17b",
+    "bytes": 93
+  },
+  {
+    "source": 6,
+    "chapter": 3,
+    "original": "Virksomhedsbesøg Hydrema.txt",
+    "original_folder": "3. Virksomhedsbesøg",
+    "asset": "sources/03-01.txt",
+    "page": "logistik/03/01.html",
+    "links": [],
+    "sha256": "0e842dd5da2da28acd2e986d46a5da0e5515be089b0d0ea6e6da3b1d281e34b0",
+    "bytes": 883
+  },
+  {
+    "source": 7,
+    "chapter": 4,
+    "original": "1. Video.txt",
+    "original_folder": "4. Værdikæden grundlæggende",
+    "asset": "sources/04-01.txt",
+    "page": "logistik/04/01.html",
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=e1XaT__IAxo",
+        "status": {
+          "da": "Åbnet; transskription læst og resumeret.",
+          "en": "Opened; transcript reviewed and summarised.",
+          "pt": "Aberto; transcrição lida e resumida."
+        }
+      }
+    ],
+    "sha256": "dc23294d7eed50e8d9d13ed744bbb151dca046d242faa2979b33f4a80e05dac3",
+    "bytes": 43
+  },
+  {
+    "source": 8,
+    "chapter": 4,
+    "original": "2. Værdikæden.pptx",
+    "original_folder": "4. Værdikæden grundlæggende",
+    "asset": "sources/04-02.pptx",
+    "page": "logistik/04/02.html",
+    "links": [
+      {
+        "url": "https://www.youtube.com/embed/e1XaT__IAxo?start=29&feature=oembed",
+        "status": {
+          "da": "Åbnet; transskription læst og resumeret.",
+          "en": "Opened; transcript reviewed and summarised.",
+          "pt": "Aberto; transcrição lida e resumida."
+        }
+      }
+    ],
+    "sha256": "ca70a5e3e0dc61b681045c6135b90b3ad652a32822abc68641a20c444d3f0c46",
+    "bytes": 949316
+  },
+  {
+    "source": 9,
+    "chapter": 4,
+    "original": "3. Indspark_ Lav selv eller læg produktion ud_ _ SCM.dk.pdf",
+    "original_folder": "4. Værdikæden grundlæggende",
+    "asset": "sources/04-03.pdf",
+    "page": "logistik/04/03.html",
+    "links": [
+      {
+        "url": "https://scm.dk/indspark-lav-selv-eller-læg-produktion-ud",
+        "status": {
+          "da": "Weblink kunne ikke hentes; vedlagt PDF er læst.",
+          "en": "Web link could not be retrieved; supplied PDF reviewed.",
+          "pt": "Link não pôde ser recuperado; PDF fornecido foi analisado."
+        }
+      }
+    ],
+    "sha256": "8a200cf334f0db7603df290bd1c4752caf01150ae2e5f9f34663db60bd7bc55a",
+    "bytes": 476237
+  },
+  {
+    "source": 10,
+    "chapter": 4,
+    "original": "4.. Strategi for outsourcing og hjemtagning af produktion.pdf",
+    "original_folder": "4. Værdikæden grundlæggende",
+    "asset": "sources/04-04.pdf",
+    "page": "logistik/04/04.html",
+    "links": [
+      {
+        "url": "https://effektivitet.dk/magasin/produktion-i-danmark/strategi-for-outsourcing-og-hjemtagning-af-produktion/",
+        "status": {
+          "da": "Åbnet og indarbejdet i studieteksten.",
+          "en": "Opened and incorporated into the study text.",
+          "pt": "Aberto e incorporado ao material de estudo."
+        }
+      }
+    ],
+    "sha256": "3ae021897148a3358ecfbc2898287e1b286065d16b298c7d86f7dcecf6277a7f",
+    "bytes": 1296609
+  },
+  {
+    "source": 11,
+    "chapter": 4,
+    "original": "5. opgave Beregninger til værdikæden.docx",
+    "original_folder": "4. Værdikæden grundlæggende",
+    "asset": "sources/04-05.docx",
+    "page": "logistik/04/05.html",
+    "links": [],
+    "sha256": "00ecd968abdb9170f31b4708b425d90aba887f627a1a3b3159454d18f14f1fc9",
+    "bytes": 18028
+  },
+  {
+    "source": 12,
+    "chapter": 5,
+    "original": "1. Supply Chain Management.pptx",
+    "original_folder": "5. Supply Chain Management",
+    "asset": "sources/05-01.pptx",
+    "page": "logistik/05/01.html",
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=w1Loz8IG73I",
+        "status": {
+          "da": "Åbnet; transskription læst og resumeret.",
+          "en": "Opened; transcript reviewed and summarised.",
+          "pt": "Aberto; transcrição lida e resumida."
+        }
+      },
+      {
+        "url": "https://youtu.be/Bblo8_B32Co",
+        "status": {
+          "da": "Åbnet; transskription læst og resumeret.",
+          "en": "Opened; transcript reviewed and summarised.",
+          "pt": "Aberto; transcrição lida e resumida."
+        }
+      }
+    ],
+    "sha256": "159b5ee0c31629b4120ac4eb05336e6dcee3571b9df14c7b31496e471673e88b",
+    "bytes": 1717240
+  },
+  {
+    "source": 13,
+    "chapter": 5,
+    "original": "2. SCM artikel.txt",
+    "original_folder": "5. Supply Chain Management",
+    "asset": "sources/05-02.txt",
+    "page": "logistik/05/02.html",
+    "links": [
+      {
+        "url": "https://www.scm.dk/fra-just-in-time-til-just-in-case-robuste-forsyningskaeder-i-en-ustabil-verden",
+        "status": {
+          "da": "Åbnet og indarbejdet i studieteksten.",
+          "en": "Opened and incorporated into the study text.",
+          "pt": "Aberto e incorporado ao material de estudo."
+        }
+      }
+    ],
+    "sha256": "2facc5d3de8cc5977c295310c697c942498bb6795624ff1770915c88ad909cbd",
+    "bytes": 97
+  },
+  {
+    "source": 14,
+    "chapter": 5,
+    "original": "3. Podcast.txt",
+    "original_folder": "5. Supply Chain Management",
+    "asset": "sources/05-03.txt",
+    "page": "logistik/05/03.html",
+    "links": [
+      {
+        "url": "https://www.scm.dk/scm-agendaen-24-robusthed-i-forsyningskaederne-via-ai-drevet-software",
+        "status": {
+          "da": "Åbnet og indarbejdet i studieteksten.",
+          "en": "Opened and incorporated into the study text.",
+          "pt": "Aberto e incorporado ao material de estudo."
+        }
+      }
+    ],
+    "sha256": "7ca45a7175da1e046cad1192779cfb55d77ac75cdcfd9737031a79ebfaec860b",
+    "bytes": 88
+  },
+  {
+    "source": 15,
+    "chapter": 5,
+    "original": "4. Opgave forsyningskæden egen virksomhed.txt",
+    "original_folder": "5. Supply Chain Management",
+    "asset": "sources/05-04.txt",
+    "page": "logistik/05/04.html",
+    "links": [],
+    "sha256": "c68d51278ed5d9b616021d94f07795876f6b4d0452d811fde725d322afb26a99",
+    "bytes": 584
+  },
+  {
+    "source": 16,
+    "chapter": 7,
+    "original": "1. uge opgaven logistik mål supply chain.docx",
+    "original_folder": "7. Ugeopgaven",
+    "asset": "sources/07-01.docx",
+    "page": "logistik/07/01.html",
+    "links": [],
+    "sha256": "60e9cda86758685503429ffeb7bd3150d4f500e5de523e40b58e64f125ed103c",
+    "bytes": 26175
+  },
+  {
+    "source": 17,
+    "chapter": 7,
+    "original": "2. uge opgaven logistik arbejdsspørgsmål.docx",
+    "original_folder": "7. Ugeopgaven",
+    "asset": "sources/07-02.docx",
+    "page": "logistik/07/02.html",
+    "links": [],
+    "sha256": "18d1de0832c63e5c070d1abbe605a122198ac54e16130584119b5b66a791f5cf",
+    "bytes": 23427
+  },
+  {
+    "source": 18,
+    "chapter": 8,
+    "original": "2. Elevtrivsel og undervisningsevaluering nov 2025.pptx",
+    "original_folder": "8. Fredag - Fremlæggelse og evaluering",
+    "asset": "sources/08-01.pptx",
+    "page": "logistik/08/01.html",
+    "links": [
+      {
+        "url": "http://www.eud-trivsel.dk/",
+        "status": {
+          "da": "Ekstern skoleportal; indhold kræver skolens adgang.",
+          "en": "External school portal; content requires school access.",
+          "pt": "Portal escolar externo; conteúdo exige acesso da escola."
+        }
+      },
+      {
+        "url": "https://www.eud-trivsel.dk",
+        "status": {
+          "da": "Ekstern skoleportal; indhold kræver skolens adgang.",
+          "en": "External school portal; content requires school access.",
+          "pt": "Portal escolar externo; conteúdo exige acesso da escola."
+        }
+      }
+    ],
+    "sha256": "8483aa0388d3f4afa422ecb1aea927b180bf01a504db02bff360e0a86d82a86e",
+    "bytes": 575018
+  },
+  {
+    "source": 19,
+    "chapter": 9,
+    "original": "Samtaleskema IKEA.docx",
+    "original_folder": "9. Ikea logistikelever",
+    "asset": "sources/09-01.docx",
+    "page": "logistik/09/01.html",
+    "links": [
+      {
+        "url": "http://www.uddataplus.dk",
+        "status": {
+          "da": "Ekstern skoleportal; indhold kræver skolens adgang.",
+          "en": "External school portal; content requires school access.",
+          "pt": "Portal escolar externo; conteúdo exige acesso da escola."
+        }
+      },
+      {
+        "url": "https://www.uddataplus.dk",
+        "status": {
+          "da": "Ekstern skoleportal; indhold kræver skolens adgang.",
+          "en": "External school portal; content requires school access.",
+          "pt": "Portal escolar externo; conteúdo exige acesso da escola."
+        }
+      }
+    ],
+    "sha256": "2ab78cd39cbf6444b7f6d4740306d45826438084e578aea2b5744b0a2dea7936",
+    "bytes": 62031
+  }
+]
