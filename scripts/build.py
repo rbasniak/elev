@@ -35,9 +35,9 @@ LABEL={
 'read':T('Markér som læst','Mark as read','Marcar como lido'),
 'copy':T('Kopiér mine svar','Copy my answers','Copiar minhas respostas'),
 'listen':T('Lyt','Listen','Ouvir'),
-'video':T('Video · resumé fra transskription','Video · transcript-based summary','Vídeo · resumo baseado na transcrição'),
-'watch':T('Se videoen','Watch video','Assistir ao vídeo'),
-'capture':T('Transskription læst 6. november 2026. Resuméet er bearbejdet; automatiske undertekster kan indeholde fejl.','Transcript reviewed on 6 November 2026. Summary is adapted; automatic captions may contain errors.','Transcrição lida em 6 de novembro de 2026. Resumo adaptado; legendas automáticas podem conter erros.'),
+'video':T('Videolektioner til selvstudium','Video lessons for self-study','Aulas para estudar sem assistir aos vídeos'),
+'watch':T('Originalvideo (valgfri)','Original video (optional)','Vídeo original (opcional)'),
+'capture':T('Bearbejdet studielektion med supplerende forklaringer og egne øveeksempler.','Adapted lesson with additional explanations and original practice examples.','Aula adaptada com explicações complementares e exemplos didáticos próprios.'),
 'guide':T('Eget studiemateriale · ikke en officiel IKEA-side','Personal study material · not an official IKEA site','Material pessoal de estudo · não é site oficial da IKEA'),
 'complete':T('Filer læst','Files read','Arquivos lidos')}
 
@@ -161,6 +161,8 @@ for pos,p in enumerate(PAGES):
   s+=f'<details class="section-toc"><summary>{LABEL["contents"][l]}</summary>'
   for i,sec in enumerate(p['sections']):
    if sec['kind']!='answer':s+=f'<a href="#s{i}-{l}">{E(sec["heading"][l])}</a>'
+  for vid in p.get('videos', []):
+   s+=f'<a href="#video-{vid}-{l}">{E(VIDEOS[vid]["title"])}</a>'
   s+='</details>'
   for i,sec in enumerate(p['sections']):
    s+=section(sec['heading'][l],sec['body'][l],l,f's{i}',sec['kind'],f'{p["path"]}-{i}' if sec['kind']=='task' else None)
@@ -172,11 +174,21 @@ for pos,p in enumerate(PAGES):
   if p.get('videos'):
    s+=f'<section class="study-section" data-anchor="videos"><h2>{LABEL["video"][l]}</h2>'
    for vid in p['videos']:
-    v=VIDEOS[vid];s+=f'<article class="video"><h3>{E(v["title"])}</h3><div class="paragraph-text">{body(v["summary"][l],l)}</div>'
-    if l=='da':s+='<button type="button" class="video-listen" data-video-tts="'+E(v['summary']['da'])+'">▷ Lyt</button>'
+    v=VIDEOS[vid]
+    s+=f'<article class="video" id="video-{vid}-{l}" data-anchor="video-{vid}"><h3>{E(v["title"])}</h3>'
+    s+=f'<div class="paragraph-text">{body(v["summary"][l],l)}</div>'
+    for i,(heading,lesson) in enumerate(v['topics']):
+     s+=f'<div data-anchor="video-{vid}-{i}"><h4>{E(heading[l])}</h4>'
+     if l=='da':
+      speech=lesson[l].replace('- ', '')
+      s+=f'<button type="button" class="video-listen" aria-label="Lyt til {E(heading[l])}" data-video-tts="{E(speech)}">▷ Lyt</button>'
+     s+=f'<div class="paragraph-text">{body(lesson[l],l)}</div></div>'
     s+=f'<div class="video-links"><a href="https://www.youtube.com/watch?v={vid}" target="_blank" rel="noopener noreferrer">▶ {LABEL["watch"][l]}</a>'
     for ts,label in v['timestamps']:
      mm,ss=map(int,ts.split(':'));s+=f'<a href="https://www.youtube.com/watch?v={vid}&amp;t={mm*60+ss}" target="_blank" rel="noopener noreferrer">{ts}</a>'
+    if v.get('transcript'):
+     label=T('Transskription', 'Transcript', 'Transcrição')[l]
+     s+=f'<a href="{E(v["transcript"])}" target="_blank" rel="noopener noreferrer">{label}</a>'
     s+=f'</div><p class="video-status">{LABEL["capture"][l]}</p></article>'
    s+='</section>'
   if p['source'] in [8,15,17]:s+=supply(l,'supply')
@@ -198,4 +210,4 @@ for l in LANGS:
  s+='</div>';panels+=wrap(l,s)
 shell('glossary.html','Fagord',panels)
 (ROOT/'.nojekyll').touch()
-print(f'Built {len(PAGES)} material pages, {len(CHAPTERS)} chapter pages, 3 navigation/glossary pages; {len(GLOSSARY)} terms; 5 transcript-based video summaries.')
+print(f'Built {len(PAGES)} material pages, {len(CHAPTERS)} chapter pages, 3 navigation/glossary pages; {len(GLOSSARY)} terms; 5 self-study video lessons.')

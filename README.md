@@ -8,7 +8,7 @@ Site estático para a primeira etapa escolar de uma aprendiz de logística IKEA.
 - 20 páginas de materiais, uma para cada arquivo do ZIP.
 - Conteúdo de estudo alinhado em dinamarquês, inglês e português brasileiro.
 - 71 termos técnicos com tradução por hover/foco nas versões inglesa e portuguesa.
-- Cinco resumos de vídeos preparados a partir das transcrições recuperadas.
+- Cinco aulas escritas em DA, EN e PT para estudar sem assistir aos vídeos, com explicações por tópico e exemplos.
 - Originais preservados em `sources/`; correspondência e situação dos links em `sources/manifest.json`.
 
 ## Uso
@@ -23,7 +23,7 @@ Os campos das atividades salvam após 500 ms. `Copiar minhas respostas` copia s�
 
 ## Dinamarquês e ov-dansk
 
-Na versão DA, use `Lyt` para ouvir um bloco ou um resumo de vídeo. O player divide textos longos, permite velocidade e interrupção, envia `no-referrer` ao Google TTS e oferece a voz do dispositivo como alternativa. Sem voz dinamarquesa instalada, o resultado do fallback depende do navegador.
+Na versão DA, use `Lyt` para ouvir um bloco ou um tópico de uma aula de vídeo. O player divide textos longos, permite velocidade e interrupção, envia `no-referrer` ao Google TTS e oferece a voz do dispositivo como alternativa. Sem voz dinamarquesa instalada, o resultado do fallback depende do navegador.
 
 Selecione até 500 caracteres no conteúdo dinamarquês para **Gem / Definition / Oversæt / Lyt**. Use a mesma conta Google do ov-dansk. Salvar pede o significado manualmente. Os termos aparecem destacados e podem ser ouvidos, editados ou excluídos. Excluir remove também `progress/custom_{id}`. A versão EN/PT não permite operações de vocabulário.
 
@@ -47,7 +47,7 @@ As páginas são adaptações didáticas e traduções alinhadas, não uma repro
 - A visita Hydrema não informa a data; local/horários são transcritos como informação do convite, não agenda atual confirmada.
 - O link do antigo artigo SCM sobre make/buy não foi recuperado; a análise utiliza o PDF completo enviado.
 - Os dois artigos online SCM foram abertos. O podcast tem resumo do artigo associado; não alegamos ter transcrito o áudio.
-- Os cinco vídeos YouTube foram abertos e suas transcrições lidas. Resumos são curtos; legendas automáticas podem conter erros. As transcrições completas não são redistribuídas.
+- Os cinco vídeos YouTube foram abertos e suas transcrições lidas. As aulas ampliam as sínteses originais com explicações e exemplos próprios. As transcrições completas não são redistribuídas.
 - Links de plataformas escolares foram verificados sem entrar nem enviar formulários. O acesso depende da escola.
 - Casos empresariais históricos não representam números atuais. Exemplos IKEA são modelos para confirmar e adaptar, sem presumir processos internos específicos.
 - Denominadores diferentes, inconsistências entre narrativa/tabelas e premissas de cálculo são explicitados. O exemplo Bloodscale apresenta 84,76% na tabela versus 75% na narrativa; não misturamos os dois.

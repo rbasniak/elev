@@ -47,4 +47,4 @@ assert round(sum(on_time)/sum(ordered)*100,2)==84.76
 assert 69+78+95+103==345
 assert '345/214 = 1,61'in(ROOT/'content/course.py').read_text()
 assert errors==[], '\n'.join(errors)
-print(f'PASS: {len(pages)} HTML pages, 20/20 originals, 3 aligned languages, 5 video summaries, links/fragments/IDs and key calculations.')
+print(f'PASS: {len(pages)} HTML pages, 20/20 originals, 3 aligned languages, 5 self-study video lessons, links/fragments/IDs and key calculations.')
