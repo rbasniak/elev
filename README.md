@@ -9,7 +9,7 @@ Site estático para a primeira etapa escolar de uma aprendiz de logística IKEA.
 - Conteúdo de estudo alinhado em dinamarquês, inglês e português brasileiro.
 - 71 termos técnicos com tradução por hover/foco nas versões inglesa e portuguesa.
 - Cinco aulas escritas em DA, EN e PT para estudar sem assistir aos vídeos, com explicações por tópico e exemplos.
-- Originais preservados em `sources/`; correspondência e situação dos links em `sources/manifest.json`.
+- Índice dos materiais originais em `source/`, com os arquivos preservados em `sources/`; correspondência e situação dos links em `sources/manifest.json`.
 
 ## Uso
 
@@ -46,7 +46,7 @@ As páginas são adaptações didáticas e traduções alinhadas, não uma repro
 - Instruções e códigos de avaliação de 2025 precisam de confirmação com a escola.
 - A visita Hydrema não informa a data; local/horários são transcritos como informação do convite, não agenda atual confirmada.
 - O link do antigo artigo SCM sobre make/buy não foi recuperado; a análise utiliza o PDF completo enviado.
-- Os dois artigos online SCM foram abertos. O podcast tem resumo do artigo associado; não alegamos ter transcrito o áudio.
+- Os dois artigos online SCM foram abertos. A aula do podcast usa o artigo associado e exemplos didáticos próprios. O áudio integral não foi transcrito.
 - Os cinco vídeos YouTube foram abertos e suas transcrições lidas. As aulas ampliam as sínteses originais com explicações e exemplos próprios. As transcrições completas não são redistribuídas.
 - Links de plataformas escolares foram verificados sem entrar nem enviar formulários. O acesso depende da escola.
 - Casos empresariais históricos não representam números atuais. Exemplos IKEA são modelos para confirmar e adaptar, sem presumir processos internos específicos.

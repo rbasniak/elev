@@ -253,20 +253,20 @@ Leveringsfleksibilitet | Administrative omkostninger
 Leveringsinformation | Mangelomkostninger
 Kolonnerne er to lister, ikke parvise årsagssammenhænge. Trade-off: højere lager kan forbedre tilgængelighed, men øger kapitalbinding. Trade-up: en bedre proces kan både forkorte leveringstid og reducere lagerbehov.
 Leveringsfleksibilitet omfatter nye produkter, produktvarianter, mængder og leveringssteder. Leveringsinformation handler om rettidige oplysninger om blandt andet ændret dato og antal. Scanning, ERP, WMS, GPS og track & trace virker kun, når data opdateres korrekt.''',
-'''Leveringsservice | Logistikomkostninger
-Leveringstid | Lageromkostninger
-Lagerservicegrad | Transportomkostninger
-Leveringsoverholdelse | Emballage- og håndteringsomkostninger
-Leveringsfleksibilitet | Administrative omkostninger
-Leveringsinformation | Mangelomkostninger
+'''Delivery service (Leveringsservice) | Logistics costs (Logistikomkostninger)
+Delivery time (Leveringstid) | Warehouse costs (Lageromkostninger)
+Immediate stock service (Lagerservicegrad) | Transport costs (Transportomkostninger)
+On-time delivery (Leveringsoverholdelse) | Packaging and handling costs (Emballage- og håndteringsomkostninger)
+Delivery flexibility (Leveringsfleksibilitet) | Administration costs (Administrative omkostninger)
+Delivery information (Leveringsinformation) | Shortage costs (Mangelomkostninger)
 These are two lists, not row-by-row causal pairs. Trade-off: more inventory can improve availability but increases lagerbinding. Trade-up: a better process can shorten delivery time and reduce stock needs together.
 Leveringsfleksibilitet includes new products, variants, quantities and delivery locations. Leveringsinformation means timely updates about changes such as date and quantity. Scanning, ERP, WMS, GPS and tracking depend on accurate updates.''',
-'''Leveringsservice | Logistikomkostninger
-Leveringstid | Lageromkostninger
-Lagerservicegrad | Transportomkostninger
-Leveringsoverholdelse | Emballage- og håndteringsomkostninger
-Leveringsfleksibilitet | Administrative omkostninger
-Leveringsinformation | Mangelomkostninger
+'''Serviço de entrega (Leveringsservice) | Custos logísticos (Logistikomkostninger)
+Prazo de entrega (Leveringstid) | Custos de armazenagem (Lageromkostninger)
+Nível de atendimento imediato pelo estoque (Lagerservicegrad) | Custos de transporte (Transportomkostninger)
+Cumprimento do prazo (Leveringsoverholdelse) | Custos de embalagem e manuseio (Emballage- og håndteringsomkostninger)
+Flexibilidade de entrega (Leveringsfleksibilitet) | Custos administrativos (Administrative omkostninger)
+Informações de entrega (Leveringsinformation) | Custos da falta de produtos (Mangelomkostninger)
 São duas listas, não relações de causa por linha. Trade-off: mais estoque pode melhorar a disponibilidade, mas aumenta lagerbinding. Trade-up: melhorar um processo pode reduzir prazo e necessidade de estoque ao mesmo tempo.
 Leveringsfleksibilitet envolve novos produtos, variantes, quantidades e locais de entrega. Leveringsinformation é informar mudanças de data e quantidade em tempo hábil. Scanning, ERP, WMS, GPS e rastreamento dependem de registros corretos.''')
 S(a,T('Formler · vælg den rigtige måleenhed','Formulas · choose the right unit','Fórmulas · escolha a unidade correta'),
@@ -283,22 +283,22 @@ Bland ikke enheder, ordrelinjer og hele ordrer. Nævn altid nævneren. Originale
 '''Measure | Calculation
 Lead time | Technical processing + order processing + purchasing + production + distribution, when stages are sequential.
 GAB | Business lead time minus the customer’s acceptable delivery time.
-Lagerservicegrad, orders | Complete orders fulfilled from stock / orders placed × 100.
-Lagerservicegrad, units | Units fulfilled from stock / units ordered × 100.
-Leveringsoverholdelse, units | Units delivered on time / relevant delivered units × 100.
-Omsætningshastighed | Annual cost of goods consumed / average stock at cost.
-Average lagerdage | 365 / annual stock turnover, under a 365-day convention.
-Logistikomkostninger percentage | Total logistics costs / revenue × 100.
+Immediate stock service (Lagerservicegrad), orders | Complete orders fulfilled from stock / orders placed × 100.
+Immediate stock service (Lagerservicegrad), units | Units fulfilled from stock / units ordered × 100.
+On-time delivery (Leveringsoverholdelse), units | Units delivered on time / relevant delivered units × 100.
+Inventory turnover (Omsætningshastighed) | Annual cost of goods consumed / average stock at cost.
+Average Inventory days (lagerdage) | 365 / annual stock turnover, under a 365-day convention.
+Logistics costs (Logistikomkostninger) percentage | Total logistics costs / revenue × 100.
 Do not mix units, order lines and complete orders. State the denominator. The original’s complete-order formula measures completeness; punctuality also requires an agreed date. Stock turnover uses consumption at cost, not sales revenue.''',
 '''Indicador | Cálculo
 Lead time | Processamento técnico + pedido + compras + produção + distribuição, quando as etapas são sequenciais.
 GAB | Lead time da empresa menos o prazo aceito pelo cliente.
-Lagerservicegrad, pedidos | Pedidos completos atendidos do estoque / pedidos recebidos × 100.
-Lagerservicegrad, unidades | Unidades atendidas do estoque / unidades pedidas × 100.
-Leveringsoverholdelse, unidades | Unidades entregues no prazo / unidades entregues pertinentes × 100.
-Omsætningshastighed | Consumo anual de mercadorias a custo / estoque médio a custo.
-Lagerdage médios | 365 / giro anual, usando a convenção de 365 dias.
-Percentual de logistikomkostninger | Custos logísticos totais / faturamento × 100.
+Nível de atendimento imediato pelo estoque (Lagerservicegrad), pedidos | Pedidos completos atendidos do estoque / pedidos recebidos × 100.
+Nível de atendimento imediato pelo estoque (Lagerservicegrad), unidades | Unidades atendidas do estoque / unidades pedidas × 100.
+Cumprimento do prazo (Leveringsoverholdelse), unidades | Unidades entregues no prazo / unidades entregues pertinentes × 100.
+Giro de estoque (Omsætningshastighed) | Consumo anual de mercadorias a custo / estoque médio a custo.
+Dias de estoque (Lagerdage) médios | 365 / giro anual, usando a convenção de 365 dias.
+Percentual de Custos logísticos (logistikomkostninger) | Custos logísticos totais / faturamento × 100.
 Não misture unidades, linhas e pedidos completos. Declare o denominador. A fórmula de pedidos completos do original mede completude; pontualidade também exige a data acordada. O giro usa consumo a custo, não faturamento.''')
 S(a,T('Forstå omkostningerne','Understand the costs','Entenda os custos'),
 '''- Lageromkostninger: husleje, løn, trucks, reoler, svind og forrentning af kapital i lager.
@@ -307,17 +307,17 @@ S(a,T('Forstå omkostningerne','Understand the costs','Entenda os custos'),
 - Administration: løn og IT til ordrer og koordinering. Mange små ordrer, dobbeltindtastning og særprocedurer øger tidsforbruget. EDI og standardiserede processer kan hjælpe.
 - Mangelomkostninger: tabt dækningsbidrag, hastefragt, nødkøb og andre følger af manglende levering. Undgå at tælle den samme mistede indtjening to gange.
 En lav indkøbspris kan give højere totalomkostning gennem lager, fejl og transport.''',
-'''- Lageromkostninger: rent, staff, trucks, racks, shrinkage and capital costs.
-- Transportomkostninger: internal moves and external freight. Use the 3PL agreement/invoice; own transport also includes vehicles, wages, fuel, maintenance and capacity.
+'''- Warehouse costs (Lageromkostninger): rent, staff, trucks, racks, shrinkage and capital costs.
+- Transport costs (Transportomkostninger): internal moves and external freight. Use the 3PL agreement/invoice; own transport also includes vehicles, wages, fuel, maintenance and capacity.
 - Packaging: materials, labour, machines, design, handling and waste. Labour per box = hourly wage / boxes packed per hour.
 - Administration: labour and IT for orders and coordination. Small orders, duplicate entry and exceptions take time. EDI and standard processes can help.
-- Mangelomkostninger: lost dækningsbidrag, emergency freight/purchases and other shortage consequences. Do not double-count lost earnings.
+- Shortage costs (Mangelomkostninger): lost dækningsbidrag, emergency freight/purchases and other shortage consequences. Do not double-count lost earnings.
 A cheap purchase price may increase total costs through storage, errors and transport.''',
-'''- Lageromkostninger: aluguel, equipe, empilhadeiras, estruturas, perdas e custo do capital em estoque.
-- Transportomkostninger: movimentações internas e frete externo. Para 3PL, use contrato/fatura; transporte próprio também inclui veículo, salários, combustível, manutenção e capacidade.
+'''- Custos de armazenagem (Lageromkostninger): aluguel, equipe, empilhadeiras, estruturas, perdas e custo do capital em estoque.
+- Custos de transporte (Transportomkostninger): movimentações internas e frete externo. Para 3PL, use contrato/fatura; transporte próprio também inclui veículo, salários, combustível, manutenção e capacidade.
 - Embalagem: material, trabalho, máquinas, projeto, manuseio e descarte. Mão de obra por caixa = salário por hora / caixas embaladas por hora.
 - Administração: salários e TI para pedidos e coordenação. Pedidos pequenos, digitação duplicada e exceções consomem tempo. EDI e processos padronizados ajudam.
-- Mangelomkostninger: dækningsbidrag perdido, frete urgente, compras emergenciais e outros efeitos da falta. Não conte a mesma receita perdida duas vezes.
+- Custos da falta de produtos (Mangelomkostninger): dækningsbidrag perdido, frete urgente, compras emergenciais e outros efeitos da falta. Não conte a mesma receita perdida duas vezes.
 Preço de compra baixo pode elevar o custo total por estoque, erros e transporte.''')
 S(a,T('Tre regneopgaver','Three calculation exercises','Três exercícios de cálculo'),
 '''1. Lead time: teknisk behandling 1 dag, ordrebehandling 1, indkøb 5, produktion 3 og distribution 2. Kunden accepterer 7 dage. Beregn samlet tid og GAB.
@@ -646,12 +646,12 @@ Afterwards, write three observations, two links to theory and one remaining ques
 - Quais atividades são internas e quais terceirizadas?
 Depois, escreva três observações, duas relações com a teoria e uma dúvida restante. Compare uma fabricante com seu trabalho no varejo IKEA.''','task')
 
-a=page(7,T('Video · værdikæde og internationalisering','Video · value chain and internationalisation','Vídeo · cadeia de valor e internacionalização'),T('Videoen gennemgås med et kort resumé, begreber og spørgsmål.','Study the video through a short summary, terms and questions.','Estude o vídeo com resumo, conceitos e perguntas.'))
+a=page(7,T('Værdikæde og internationalisering','Value chain and internationalisation','Cadeia de valor e internacionalização'),T('Lær Porters model trin for trin, og anvend den på en vare, du kender.','Learn Porter’s model step by step and apply it to a product you know.','Aprenda o modelo de Porter passo a passo e aplique-o a um produto que você conhece.'))
 a['videos']=['e1XaT__IAxo']
-S(a,T('Sådan ser du aktivt','Watch actively','Assista de forma ativa'),
-'''Se først videoen uden at skrive. Se den igen og find de fem primære aktiviteter og de fire støtteaktiviteter. Vælg derefter ét produkt, og forklar, hvor kunden oplever værdi. Skeln mellem værdikæden i én virksomhed og forsyningskæden mellem virksomheder.''',
-'''Watch once without taking notes. Then identify the five primary activities and four support activities. Choose a product and explain where the customer experiences value. Distinguish a company’s værdikæde from the forsyningskæde between companies.''',
-'''Assista uma vez sem anotar. Depois identifique as cinco atividades primárias e as quatro de apoio. Escolha um produto e explique onde o cliente percebe valor. Distinga a værdikæde da empresa e a forsyningskæde entre empresas.''')
+S(a,T('Sådan bruger du lektionen','How to use the lesson','Como usar a aula'),
+'''Læs lektionen nedenfor. Prøv derefter at nævne én aktivitet, der flytter en ordre fremad, og én, som støtter mange ordrer. Brug f.eks. en lampe: at pakke den til kunden er en primær aktivitet. At oplære medarbejderne i pakning er en støtteaktivitet.''',
+'''Read the lesson below. Then name one activity that moves an order forward and another that supports many orders. Use a lamp: packing it for the customer is a primary activity. Training employees to pack is a support activity.''',
+'''Leia a aula abaixo. Depois cite uma atividade que faz um pedido avançar e outra que dá suporte a muitos pedidos. Use uma luminária: embalar para o cliente é atividade primária. Ensinar a equipe a embalar é atividade de apoio.''')
 
 a=page(8,T('Værdikæden og make or buy','The value chain and make or buy','Cadeia de valor e make or buy'),T('Find de aktiviteter, der skaber værdi, og de forbindelser, der gør hele processen bedre.','Identify value-creating activities and the links that improve the whole process.','Identifique as atividades que geram valor e as conexões que melhoram o processo completo.'))
 S(a,T('Fem primære aktiviteter','Five primary activities','Cinco atividades primárias'),
@@ -663,16 +663,16 @@ Marketing og salg | Skabe efterspørgsel, tage imod ordrer, aftale pris og reali
 Service | Retur, reparation, garanti, reservedele, installation og hjælp efter køb.
 I en handelsvirksomhed som et varehus kan operationer være klargøring, håndtering og udstilling, ikke nødvendigvis fremstilling. Cross-docking flytter varer videre med minimal lagring; konsolidering samler forsendelser. De er logistiske procesvalg, ikke altid produktion.''',
 '''Activity | Examples from the material
-Indgående logistik | Receiving, unloading, inspection, registration and put-away.
+Inbound logistics (Indgående logistik) | Receiving, unloading, inspection, registration and put-away.
 Production / operations | Manufacturing, assembly, repacking, labelling, kitting and checks.
-Udgående logistik | Pluk, pak, loading, transport, tracking and delivery documentation.
+Outbound logistics (Udgående logistik) | Pluk, pak, loading, transport, tracking and delivery documentation.
 Marketing and sales | Create demand, take orders, agree prices and realistic service.
 Service | Returns, repairs, warranty, parts, installation and post-sale support.
 In a retailer, operations can mean preparation, handling and displays rather than manufacturing. Cross-docking forwards goods with minimal storage; consolidation combines shipments. These are logistics choices, not necessarily production.''',
 '''Atividade | Exemplos do material
-Indgående logistik | Receber, descarregar, conferir, registrar e endereçar produtos.
+Logística de entrada (Indgående logistik) | Receber, descarregar, conferir, registrar e endereçar produtos.
 Produção / operações | Fabricar, montar, reembalar, etiquetar, formar kits e conferir qualidade.
-Udgående logistik | Pluk, pak, carregamento, transporte, rastreamento e comprovantes.
+Logística de saída (Udgående logistik) | Pluk, pak, carregamento, transporte, rastreamento e comprovantes.
 Marketing e vendas | Gerar demanda, receber pedidos, combinar preço e serviço viável.
 Service | Devoluções, reparos, garantia, peças, instalação e suporte pós-venda.
 No varejo, operações podem ser preparação, manuseio e exposição, sem fabricação. Cross-docking encaminha produtos quase sem armazenagem; consolidação reúne cargas. São escolhas logísticas, não necessariamente produção.''')
@@ -682,15 +682,15 @@ S(a,T('Fire støtteaktiviteter','Four support activities','Quatro atividades de 
 - Teknologiudvikling: scannere, automatisering, robotter, sensorer og analyse af efterspørgsel.
 - Indkøb: anskaffelse af varer og ydelser, emballage, transport, udstyr og IT.
 Indkøb i Porter-modellen er en støtteaktivitet; fysisk modtagelse er indgående logistik. Afdelingen kan bidrage til begge, men aktiviteternes funktion er forskellig.''',
-'''- Infrastruktur: management, finance, planning, IT, WMS, routes and KPI follow-up.
+'''- Infrastructure (Infrastruktur): management, finance, planning, IT, WMS, routes and KPI follow-up.
 - HR: recruitment, training, truck certification, cooperation and workplace safety.
 - Technology development: scanners, automation, robots, sensors and demand analysis.
-- Indkøb: obtaining goods/services, packaging, transport, equipment and IT.
+- Purchasing (Indkøb): obtaining goods/services, packaging, transport, equipment and IT.
 Indkøb is a support activity in Porter’s model; physically receiving goods is indgående logistik. A department may contribute to both, but the activities serve different functions.''',
-'''- Infrastruktur: gestão, finanças, planejamento, TI, WMS, rotas e indicadores.
+'''- Infraestrutura (Infrastruktur): gestão, finanças, planejamento, TI, WMS, rotas e indicadores.
 - RH: recrutamento, treinamento, habilitação de empilhadeira, colaboração e segurança.
 - Desenvolvimento tecnológico: scanners, automação, robôs, sensores e análise da demanda.
-- Indkøb: adquirir bens/serviços, embalagem, transporte, equipamentos e TI.
+- Compras (Indkøb): adquirir bens/serviços, embalagem, transporte, equipamentos e TI.
 No modelo de Porter, indkøb é apoio; receber fisicamente é indgående logistik. Um departamento pode contribuir com ambas, mas as funções são diferentes.''')
 S(a,T('Hvad viser en analyse?','What does an analysis reveal?','O que a análise mostra?'),
 '''Værdikæden kan vise, hvor kunden oplever mest værdi; hvor virksomheden er stærk eller svag; hvor omkostninger og flaskehalse opstår; og hvor der er mulighed for automatisering, koordinering eller outsourcing.
@@ -724,84 +724,7 @@ Apoio: RH treina manuseio seguro; TI conecta pedido/estoque; compras contrata pr
 Transporte externo pode ajudar a capacidade. Mantenha controle dos dados do pedido e promessas ao cliente. É exemplo de discussão, não descrição de um contrato específico da IKEA.''','answer')
 
 a=page(9,T('Artikel · lav selv eller læg ud?','Article · make or outsource?','Artigo · produzir ou terceirizar?'),T('Einar Olsen, Valcon Sourcing · SCM.dk, 28. april 2008. Bearbejdet ud fra den vedlagte PDF.','Einar Olsen, Valcon Sourcing · SCM.dk, 28 April 2008. Adapted from the supplied PDF.','Einar Olsen, Valcon Sourcing · SCM.dk, 28 de abril de 2008. Adaptação do PDF fornecido.'))
-S(a,T('Hovedargument og kompetencematrix','Main argument and capability matrix','Argumento principal e matriz de competências'),
-'''Start med kernekompetencer: Hvad skaber værdi, er svært at efterligne og giver adgang til indtjening eller markeder? Virksomheden skal ikke være bedst til alt, men indgå i en effektiv samlet værdikæde.
-Egen kompetence | Betydning for forretningen | Overvejelse
-Lav | Lav | Oplagt kandidat til outsourcing.
-Høj | Lav | Skab mere forretningsværdi eller nedprioritér aktiviteten.
-Lav | Høj | Udvikl kompetencen eller skaf en stærk strategisk partner.
-Høj | Høj | Beskyt og udvikl den strategiske styrke.
-Forfatteren peger på outsourcing ved standardteknologi, behov for ekstern teknologi eller ændring af faste omkostninger til variable. Strategiske processer, afgørende leveringstid, høje sikkerheds-/kvalitetskrav og kompleks styring kan tale for at beholde aktiviteten. Det er kriterier til vurdering, ikke en automatisk regel.''',
-'''Start with kernekompetencer: what creates value, is difficult to imitate and supports earnings or market access? A company need not excel at everything; it must participate in an effective overall værdikæde.
-Internal capability | Business importance | Consideration
-Low | Low | Strong outsourcing candidate.
-High | Low | Increase business value or reduce attention/resources.
-Low | High | Develop capability or obtain a strong strategic partner.
-High | High | Protect and develop strategic strength.
-The author identifies standard technology, access to external innovation and shifting fixed to variable costs as outsourcing considerations. Strategic processes, critical lead time, security/quality requirements and complex control can favour internal delivery. These are judgement criteria, not automatic rules.''',
-'''Comece pelas kernekompetencer: o que gera valor, é difícil de copiar e traz receita ou acesso a mercados? A empresa não precisa ser a melhor em tudo, mas participar de uma værdikæde eficiente.
-Competência interna | Importância no negócio | Avaliação
-Baixa | Baixa | Forte candidata à terceirização.
-Alta | Baixa | Aumentar valor gerado ou reduzir atenção/recursos.
-Baixa | Alta | Desenvolver competência ou buscar parceiro estratégico forte.
-Alta | Alta | Proteger e desenvolver a força estratégica.
-O autor considera tecnologia padronizada, inovação externa e transformação de custo fixo em variável como razões para avaliar terceirização. Processo estratégico, prazo decisivo, segurança/qualidade e controle complexo podem favorecer execução interna. São critérios, não regras automáticas.''')
-S(a,T('Tjeklisten før en beslutning','Checklist before deciding','Checklist antes da decisão'),
-'''- Volumen og stykpris: hvordan ændres økonomien ved større eller mindre mængder?
-- Dokumentation: kan partneren levere korrekt uden tavs intern viden?
-- Transition: oplæring, investering, vidensoverdragelse og flytning.
-- IPR: beskyt design og viden mod kopiering.
-- Standardisering og design for manufacturing: kan produktet fremstilles sikkert og ensartet?
-- Leverandørmarked: hvor mange reelle alternativer findes?
-- Fleksibilitet: hvad sker der med kompleksitet, gennemsigtighed og reaktionstid?
-Risikoen er ikke kun en dårlig leverance. Hvis samarbejdet fejler efter flere år, kan interne medarbejdere og kompetencer være væk. Hjemtagning kan derfor blive dyr. Planlæg opfølgning og en realistisk exitmulighed.''',
-'''- Volume/unit cost: how does the economics change with quantity?
-- Documentation: can a partner deliver without unspoken internal knowledge?
-- Transition: training, investment, knowledge transfer and relocation.
-- IPR: protect design and knowledge from copying.
-- Standardisation/design for manufacturing: can production be consistent and reliable?
-- Supplier market: how many genuine alternatives exist?
-- Flexibility: effects on complexity, visibility and response speed.
-Failure can cost more than a bad delivery. After years, internal staff and capabilities may be gone, making insourcing expensive. Plan monitoring and a realistic exit route.''',
-'''- Volume/custo unitário: como a economia muda com a quantidade?
-- Documentação: o parceiro consegue executar sem conhecimento interno tácito?
-- Transição: treinamento, investimento, transferência de conhecimento e mudança.
-- IPR: proteger projeto e conhecimento contra cópia.
-- Padronização/design for manufacturing: a execução pode ser consistente e confiável?
-- Mercado fornecedor: quantas alternativas reais existem?
-- Flexibilidade: efeitos em complexidade, visibilidade e reação.
-O risco vai além de uma entrega ruim. Anos depois, equipe e competência internas podem ter desaparecido, tornando insourcing caro. Planeje acompanhamento e saída realista.''')
-
 a=page(10,T('Artikel · outsourcing og hjemtagning','Article · outsourcing and bringing production back','Artigo · terceirização e retorno da produção'),T('Amdi Hansen, PA Consulting Group · historisk artikel, vedlagt som PDF.','Amdi Hansen, PA Consulting Group · historical article supplied as PDF.','Amdi Hansen, PA Consulting Group · artigo histórico fornecido em PDF.'))
-S(a,T('Se på hele værdikæden','Consider the whole value chain','Avalie toda a cadeia de valor'),
-'''Lav løn er ikke det samme som lav totalomkostning. Varierende kvalitet, transport, lang lead time, koordinering og tab af kernekompetencer kan udligne en lønbesparelse.
-Outsourcing betyder, at en ekstern virksomhed udfører aktiviteten. Offshoring betyder, at aktiviteten flyttes til et andet land. Insourcing tager aktiviteten internt; backshoring flytter den tilbage til hjemlandet. Det er to forskellige dimensioner: ejerskab og geografi.
-Artiklen bruger LEGO og Hagens Fjedre som historiske eksempler. Pointen er at reducere kompleksitet og vurdere automatisering før en dyr flytning. Ældre beskæftigelses- og væksttal i artiklen er historisk baggrund, ikke aktuelle prognoser.''',
-'''Low wages do not equal low total costs. Variable quality, transport, long lead time, coordination and lost kernekompetencer can absorb wage savings.
-Outsourcing means an external business performs the activity. Offshoring moves it abroad. Insourcing brings it in-house; backshoring brings it back to the home country. Ownership and geography are separate dimensions.
-The article uses LEGO and Hagens Fjedre as historical examples. Its lesson is to reduce complexity and consider automation before a costly relocation. Old employment figures and growth targets are historical context, not current forecasts.''',
-'''Salário baixo não significa custo total baixo. Variação de qualidade, transporte, lead time longo, coordenação e perda de kernekompetencer podem anular a economia.
-Outsourcing contrata uma empresa externa. Offshoring move a atividade para outro país. Insourcing traz a atividade para dentro; backshoring a devolve ao país de origem. Propriedade e geografia são dimensões diferentes.
-O artigo usa LEGO e Hagens Fjedre como exemplos históricos. A lição é reduzir complexidade e considerar automação antes de uma mudança cara. Dados antigos de emprego e metas econômicas são contexto histórico, não previsões atuais.''')
-S(a,T('En rækkefølge til analysen','A sequence for the analysis','Uma sequência para analisar'),
-'''1. Kortlæg end-to-end-værdikæden og afhængigheder mellem produkter, kunder, processer og systemer.
-2. Reducér unødig kompleksitet og undgå silooptimering.
-3. Standardisér gode arbejdsgange og skab fælles sprog og mål.
-4. Vurdér automatisering og digitalisering samt kompetencebehov.
-5. Sammenlign derefter intern drift med outsourcing/offshoring på totalomkostning, kvalitet, lead time og risiko.
-Spørg dig selv: Hvilken forbedring kunne vi opnå uden at flytte aktiviteten? Hvilken viden risikerer vi at miste? Hvordan kan vi måle, om beslutningen gavner kunden?''',
-'''1. Map the end-to-end værdikæde and dependencies between products, customers, processes and systems.
-2. Reduce unnecessary complexity and isolated optimisation.
-3. Standardise good processes and shared language/objectives.
-4. Assess automation, digitalisation and skill needs.
-5. Then compare internal delivery with outsourcing/offshoring on total cost, quality, lead time and risk.
-Ask: what could improve without moving the activity? What knowledge might be lost? How will we measure customer value?''',
-'''1. Mapeie a værdikæde ponta a ponta e as dependências entre produtos, clientes, processos e sistemas.
-2. Reduza complexidade desnecessária e otimização isolada.
-3. Padronize bons processos, linguagem e objetivos comuns.
-4. Avalie automação, digitalização e competências necessárias.
-5. Depois compare execução interna e outsourcing/offshoring por custo total, qualidade, prazo e risco.
-Pergunte: o que melhoraria sem mudar a atividade? Que conhecimento podemos perder? Como medir o benefício ao cliente?''')
 a=page(11,T('Beregninger til værdikæden','Value-chain calculations','Cálculos da cadeia de valor'),T('Vis altid aktivitetsfordeling, total og hvilken procentbase du bruger.','Always show activity costs, total and the percentage base.','Mostre custos por atividade, total e base de cada percentual.'))
 S(a,T('Opgave 1 · LegetøjsFabrikken','Exercise 1 · LegetøjsFabrikken','Exercício 1 · LegetøjsFabrikken'),
 '''En legetøjsbil bruger plast 45 kr., metal 95 kr., elektronik 120 kr. og maling/dekoration 40 kr. Produktion koster løn 150 kr. og maskiner/værktøj 50 kr. Udgående logistik 40 kr.; marketing/salg 20 kr.; service 10 kr.
@@ -905,7 +828,7 @@ Lager | Høj omsætningshastighed | Målrettet buffer, hvor det hjælper
 Leverandørvalg | Pris og stabilitet | Reaktionsevne, kvalitet og service
 Eksempel | Standard-T-shirt med få varianter | Modetøj med hyppige designændringer
 Det er en forenklet model. Et stort lager er ikke automatisk responsivt. Placering, produktmix, leveringstid og fleksibilitet skal passe til kundens behov. Mismatch opstår fx, når ustabil efterspørgsel styres med meget lange, ufleksible serier.''',
-'''Choice | Effektiv forsyningskæde | Responsiv forsyningskæde
+'''Choice | Efficient supply chain (Effektiv forsyningskæde) | Responsive supply chain (Responsiv forsyningskæde)
 Main goal | Low total cost | Rapid response to change
 Demand | Relatively stable/predictable | Uncertain, seasonal or fashion-driven
 Capacity | High utilisation | Buffer and flexibility
@@ -913,7 +836,7 @@ Stock | High omsætningshastighed | Targeted useful buffers
 Supplier choice | Price and stability | Responsiveness, quality and service
 Example | Standard T-shirt, few variants | Fashion with frequent design changes
 This is simplified. A large inventory is not automatically responsive. Position, mix, lead time and flexibility must fit demand. Mismatch occurs when uncertain demand is served by very long inflexible batches.''',
-'''Escolha | Effektiv forsyningskæde | Responsiv forsyningskæde
+'''Escolha | Cadeia eficiente (Effektiv forsyningskæde) | Cadeia responsiva (Responsiv forsyningskæde)
 Objetivo | Baixo custo total | Reagir rapidamente a mudanças
 Demanda | Estável/previsível | Incerta, sazonal ou de moda
 Capacidade | Alta utilização | Reserva e flexibilidade
@@ -936,10 +859,6 @@ Compartilhe vendas/estoques reais, planeje campanhas em conjunto, reduza lotes d
 As tarefas do último slide estão reunidas na página da atividade sobre a própria empresa.''')
 
 a=page(13,T('Artikel · fra just-in-time til just-in-case','Article · from just-in-time to just-in-case','Artigo · de just-in-time a just-in-case'),T('Kort resumé af den åbnede artikel. Linket er bevaret til videre læsning.','Brief summary of the retrieved article. The link is retained for further reading.','Resumo breve do artigo consultado. Link mantido para leitura adicional.'))
-S(a,T('Resumé','Summary','Resumo'),
-'''Artiklen fremhæver, at usikre markeder kræver mere robuste forsyningskæder. Digitale systemer og bedre data kan støtte planlægning, lagerstyring og samarbejde. Virksomheder skal afveje effektiv drift mod evnen til at håndtere forstyrrelser. Artiklen er sponsoreret indhold fra Fellowmind.''',
-'''The article argues for resilient supply chains in uncertain markets. Digital systems and better data can support planning, inventory control and collaboration. Businesses must balance efficient operations with disruption readiness. It is sponsored content from Fellowmind.''',
-'''O artigo destaca cadeias mais resistentes em mercados incertos. Sistemas digitais e dados melhores apoiam planejamento, estoque e colaboração. A empresa precisa equilibrar eficiência e preparo para interrupções. É conteúdo patrocinado da Fellowmind.''')
 S(a,T('Forstå principperne','Understand the principles','Entenda os princípios'),
 '''Just-in-time søger at få det nødvendige på det nødvendige tidspunkt og reducere unødigt lager. Just-in-case lægger større vægt på beredskab, fx bufferlager, alternative leverandører og kapacitetsmuligheder.
 Studieopgave: Vælg en stabil standardvare og en kritisk vare med usikker forsyning. Hvilken buffer giver mening for hver? Hvilken fejl opstår, hvis du bruger samme strategi til begge? Forklar med leveringstid, efterspørgsel og mangelomkostninger.''',
@@ -953,20 +872,20 @@ S(a,T('Resumé af artikelbeskrivelsen','Companion-article summary','Resumo do ar
 '''Podcastens artikel beskriver risikostyring på tværs af leverandørled. En fælles vurderingsmetode og scenarier skal gøre risiko synlig. Clearchain præsenterer AI-støttet dataindsamling og dashboards. Samtalen med Ole Overgaard og Michael Poulsen er sponsoreret af Clearchain; produktpåstande er ikke uafhængig dokumentation.''',
 '''The companion article discusses risk management across supplier tiers, using shared assessment methods and scenarios. Clearchain presents AI-supported data collection and dashboards. The conversation with Ole Overgaard and Michael Poulsen is sponsored by Clearchain; product claims are not independent evidence.''',
 '''O artigo associado aborda riscos nos vários níveis de fornecedores, com avaliação comum e cenários. A Clearchain apresenta coleta de dados apoiada por IA e painéis. A conversa com Ole Overgaard e Michael Poulsen é patrocinada pela Clearchain; alegações comerciais não são prova independente.''')
-S(a,T('Lytteguide og anvendelse','Listening guide and application','Guia de escuta e aplicação'),
-'''- Hvilken risiko beskrives? Skeln mellem årsag og konsekvens.
+S(a,T('Øvelse med tre risici','Practice with three risks','Exercício com três riscos'),
+'''- For hver risiko nedenfor: Hvad er årsagen, og hvad kan konsekvensen være?
 - Hvordan vurderes sandsynlighed og konsekvens?
 - Hvilke data er nødvendige, og hvem kontrollerer dem?
 - Hvilken handling følger efter en alarm?
 - Er påstanden generel faglig viden eller reklame for en løsning?
 Øvelse: Beskriv en forsinket leverandør, en forkert lagerstatus og et IT-nedbrud. Foreslå ét forebyggende tiltag og én reaktion til hver. AI kan støtte overblik, men ukorrekte input giver ikke automatisk korrekte beslutninger.''',
-'''- Which risk is described? Separate cause and consequence.
+'''- For each risk below, what is the cause and what could be the effect?
 - How are probability and impact assessed?
 - What data is needed and who checks it?
 - What action follows an alert?
 - Is a claim general knowledge or promotion of a solution?
 Exercise: consider a delayed supplier, inaccurate stock data and an IT outage. Propose prevention and a response for each. AI may support visibility; wrong input does not automatically produce sound decisions.''',
-'''- Qual risco é descrito? Separe causa e consequência.
+'''- Para cada risco abaixo, qual é a causa e qual pode ser a consequência?
 - Como avaliam probabilidade e impacto?
 - Que dados são necessários e quem os verifica?
 - Qual ação vem depois do alerta?
@@ -1070,23 +989,23 @@ Transportomkostninger | +12 % på to år | Pres fra brændstof og dårligt fyldt
 Bemærk enhederne: 89 % måles på ordrelinjer, mens 94 % beskriver korrekt og komplet levering til tiden. De må ikke bruges som samme måling.''',
 '''Metric | Actual | Target / comparison
 Revenue | DKK 220m | 2024 case data
-Logistikomkostninger | DKK 26.4m / 12% | At most 11%
-Leveringssikkerhed | 94% | 97%
-Lagerservicegrad | 89% of lines immediately from stock | No explicit target
+Logistics costs (Logistikomkostninger) | DKK 26.4m / 12% | At most 11%
+Delivery reliability (Leveringssikkerhed) | 94% | 97%
+Immediate stock service (Lagerservicegrad) | 89% of lines immediately from stock | No explicit target
 Average Danish delivery | 1.8 working days | 1–2 working days
 Return rate | 3.5% of order lines | No explicit target
-Lagerdage | 68 | Previously 54
-Transportomkostninger | +12% in two years | Fuel and low pallet fill
+Inventory days (Lagerdage) | 68 | Previously 54
+Transport costs (Transportomkostninger) | +12% in two years | Fuel and low pallet fill
 The 89% measure uses order lines; 94% means correct, complete, on-time delivery. These are different metrics.''',
 '''Indicador | Realizado | Meta / comparação
 Faturamento | DKK 220 milhões | Dados de 2024 do caso
-Logistikomkostninger | DKK 26,4 milhões / 12% | Máximo 11%
-Leveringssikkerhed | 94% | 97%
-Lagerservicegrad | 89% das linhas atendidas imediatamente | Sem meta explícita
+Custos logísticos (Logistikomkostninger) | DKK 26,4 milhões / 12% | Máximo 11%
+Confiabilidade da entrega (Leveringssikkerhed) | 94% | 97%
+Nível de atendimento imediato pelo estoque (Lagerservicegrad) | 89% das linhas atendidas imediatamente | Sem meta explícita
 Entrega média Dinamarca | 1,8 dia útil | 1–2 dias úteis
 Devolução | 3,5% das linhas | Sem meta explícita
-Lagerdage | 68 | Antes 54
-Transportomkostninger | +12% em dois anos | Combustível e paletes pouco cheios
+Dias de estoque (Lagerdage) | 68 | Antes 54
+Custos de transporte (Transportomkostninger) | +12% em dois anos | Combustível e paletes pouco cheios
 Os 89% medem linhas; 94% significa entrega correta, completa e pontual. Não são o mesmo indicador.''')
 S(a,T('SCM, konkurrence og procedurer','SCM, competition and procedures','SCM, concorrência e procedimentos'),
 '''Tre store leverandører i Tyskland/Polen får månedlige salgsdata. To asiatiske leverandører accepterer rammeordrer med løbende træk. En stor dansk detailkæde koordinerer kampagner. Tysk samarbejde har reduceret restordrer på de berørte varer med 30 %, men meget data går manuelt i Excel/mail, og ikke alle vil dele prognoser.
@@ -1424,3 +1343,7 @@ Para falar da dificuldade: Jeg synes, at de faglige begreber er udfordrende. Jeg
 Preparação/ajuda: Jeg har forberedt mig ved at … Jeg har brug for hjælp til …
 Colaboração/metas: I gruppearbejdet bidrager jeg med … Mit næste mål er …
 Complete com experiências reais. Escolha uma ação pequena: aprender cinco termos, fazer uma pergunta de esclarecimento por dia ou treinar uma explicação com colega.''')
+
+from article_lessons import expand_articles
+
+expand_articles(PAGES, T, S)

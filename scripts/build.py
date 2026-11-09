@@ -9,6 +9,7 @@ from review import REVIEWS,RECALL
 from glossary import GLOSSARY
 from videos import VIDEOS
 from diagrams import supply
+from beginner import GUIDES
 E=html.escape
 manifest=json.loads((ROOT/'sources/manifest.json').read_text())
 LABEL={
@@ -21,6 +22,7 @@ LABEL={
 'recallintro':T('Læs punkterne. Luk derefter teksten og forklar med dine egne ord. Vend tilbage i morgen, om tre dage og om en uge.','Read the points, then explain them in your own words without looking. Return tomorrow, in three days and in a week.','Leia os pontos e depois explique com suas palavras sem consultar. Revise amanhã, em três dias e em uma semana.'),
 'notes':T('Mine noter / svar','My notes / answers','Minhas anotações / respostas'),
 'sources':T('Kilder og originalfil','Sources and original file','Fontes e arquivo original'),
+'originals':T('Originale materialer','Original materials','Materiais originais'),
 'original':T('Åbn originalfil','Open original file','Abrir arquivo original'),
 'glossary':T('Fagord · tre sprog','Technical terms · three languages','Termos técnicos · três idiomas'),
 'learn':T('Læs, lyt og forstå.','Read, listen and understand.','Leia, ouça e entenda.'),
@@ -123,6 +125,8 @@ for l in LANGS:
  s=hero(l,LABEL['learn'][l],LABEL['intro'][l],home=True)
  s+=f'<div class="section-head"><h2>{LABEL["home"][l]}</h2><span class="eyebrow">01 / 01</span></div><a class="card" href="logistik/index.html"><span class="card-number">01 <span class="arrow">↗</span></span><h3>{LABEL["course"][l]}</h3><p>{LABEL["courseintro"][l]}</p><div class="card-footer"><span>9 '+{'da':'kapitler · 20 filer','en':'chapters · 20 files','pt':'capítulos · 20 arquivos'}[l]+'</span><span>5 '+{'da':'videoer','en':'videos','pt':'vídeos'}[l]+'</span></div><div class="progress-track"><span data-progress-chapter="all"></span></div></a>'
  s+=section(T('Sådan bruger du materialet','How to use this material','Como usar o material')[l],T('Vælg et kapitel og læs på det sprog, du forstår bedst. Skift til dansk ved samme afsnit. Brug Lyt til at øve faglige sætninger. Markér dansk tekst for at gemme ord, slå op, oversætte eller lytte. Noter og læsemarkeringer gemmes lokalt på enheden.','Choose a chapter and read in the language you understand best. Switch to Danish at the same passage. Use Lyt to practise sentences. Select Danish text to save words, look up, translate or listen. Notes and read markers are saved locally on this device.','Escolha um capítulo e leia no idioma que entende melhor. Mude para dinamarquês no mesmo trecho. Use Lyt para treinar frases. Selecione texto dinamarquês para salvar palavras, consultar, traduzir ou ouvir. Notas e marcações ficam salvas neste dispositivo.')[l],l,'how')
+ s+=section(T('Se øvelsessvar','See exercise answers','Como ver as resoluções')[l],T('Prøv øvelsen først. Dobbeltklik derefter på kapitelnummeret nederst til højre for at se de svar, der findes på siden.','Try the exercise first. Then double-click the chapter number at the bottom right to reveal any model answers on the page.','Tente a atividade primeiro. Depois dê duplo clique no número do capítulo, no canto inferior direito, para ver as resoluções disponíveis naquela página.')[l],l,'show-answers')
+ s+=f'<div class="pager"><a href="source/">{LABEL["originals"][l]} ↗</a></div>'
  panels+=wrap(l,s)
 shell('index.html','elev · studie & praktik',panels)
 # A harmless alias accommodates the spelling used in the request.
@@ -130,6 +134,7 @@ shell('index.html','elev · studie & praktik',panels)
 panels=''
 for l in LANGS:
  s=crumbs(l,1)+hero(l,LABEL['course'][l],LABEL['courseintro'][l])+f'<div class="section-head"><h2>{LABEL["chapters"][l]}</h2><span class="eyebrow">01—09</span></div>'+cards(l,'logistik')
+ s+=f'<div class="pager"><a href="../source/">{LABEL["originals"][l]} ↗</a></div>'
  panels+=wrap(l,s)
 shell('logistik/index.html','Logistik',panels)
 
@@ -159,13 +164,18 @@ for pos,p in enumerate(PAGES):
   if l=='da':s+='<button type="button" data-stop>■ Stop</button><label class="toolbar-label">Tempo <select data-speed aria-label="Talehastighed"><option value="0.8">0,8×</option><option value="0.95" selected>0,95×</option><option value="1.1">1,1×</option></select></label>'
   s+=f'<button type="button" class="copy-answers">{LABEL["copy"][l]}</button><button type="button" class="complete" data-page="{p["path"]}" aria-pressed="false">{LABEL["read"][l]}</button></div>'
   s+=f'<details class="section-toc"><summary>{LABEL["contents"][l]}</summary>'
+  guide=GUIDES.get(p['source'])
+  if guide:
+   s+=f'<a href="#beginner-{l}">{E(T(*guide[0])[l])}</a>'
   for i,sec in enumerate(p['sections']):
    if sec['kind']!='answer':s+=f'<a href="#s{i}-{l}">{E(sec["heading"][l])}</a>'
   for vid in p.get('videos', []):
    s+=f'<a href="#video-{vid}-{l}">{E(VIDEOS[vid]["title"])}</a>'
   s+='</details>'
+  if guide:
+   s+=section(T(*guide[0])[l],T(*guide[1])[l],l,'beginner')
   for i,sec in enumerate(p['sections']):
-   s+=section(sec['heading'][l],sec['body'][l],l,f's{i}',sec['kind'],f'{p["path"]}-{i}' if sec['kind']=='task' else None)
+   s+=section(sec['heading'][l],sec['body'][l],l,f's{i}',sec['kind'],f'{p["path"]}-{sec.get("answer_index",i)}' if sec['kind']=='task' else None)
    if p.get('chart',{}).get('section')==i:
     names=T(['Materialer','Produktion','Udgående','Marketing','Service'],['Materials','Production','Outbound','Marketing','Service'],['Materiais','Produção','Saída','Marketing','Serviço'])[l]
     s+='<div class="study-section answer chart-bars" data-anchor="chart" role="img" aria-label="'+E(T('Omkostningsfordeling: 300, 200, 40, 20 og 10 kroner','Cost distribution: 300, 200, 40, 20 and 10 kroner','Distribuição de custos: 300, 200, 40, 20 e 10 coroas')[l])+'">'
@@ -204,10 +214,24 @@ for pos,p in enumerate(PAGES):
 
 panels=''
 for l in LANGS:
+ s=hero(l,LABEL['originals'][l],T('De 20 kursusfiler, ordnet efter kapitel.','The 20 course files, grouped by chapter.','Os 20 arquivos do curso, organizados por capítulo.')[l])
+ for n,chapter in enumerate(CHAPTERS,1):
+  items=[m for m in manifest if m['chapter']==n]
+  if not items:
+   continue
+  s+=f'<section class="study-section" data-anchor="chapter-{n}"><h2>{n:02d} · {E(chapter[l])}</h2><ul>'
+  for m in items:
+   s+=f'<li><a href="../{E(m["asset"])}">{E(m["original"])}</a> · <a href="../{E(m["page"])}">{LABEL["learn"][l]}</a></li>'
+  s+='</ul></section>'
+ panels+=wrap(l,s)
+shell('source/index.html','Originale materialer',panels)
+
+panels=''
+for l in LANGS:
  s=crumbs(l,0)+hero(l,LABEL['glossary'][l],T('Lær ordene i sammenhæng. Markér et dansk ord for at gemme din egen betydning i ov-dansk.','Learn words in context. Select Danish text to save your own meaning in ov-dansk.','Aprenda no contexto. Selecione texto em dinamarquês para salvar seu significado no ov-dansk.')[l])+'<div class="dictionary">'
  for i,(term,meanings) in enumerate(sorted(GLOSSARY.items(),key=lambda x:x[0].casefold())):
   s+=f'<div class="dictionary-item" data-anchor="term{i}"><div class="paragraph-text"><strong>{E(term)}</strong><p>'+('EN: '+E(meanings[0])+'<br>PT: '+E(meanings[1]) if l=='da' else E(meanings[0 if l=='en' else 1]))+'</p></div>'+(f'<button type="button" data-video-tts="{E(term)}" class="video-listen">▷ Lyt</button>' if l=='da' else '')+'</div>'
  s+='</div>';panels+=wrap(l,s)
 shell('glossary.html','Fagord',panels)
 (ROOT/'.nojekyll').touch()
-print(f'Built {len(PAGES)} material pages, {len(CHAPTERS)} chapter pages, 3 navigation/glossary pages; {len(GLOSSARY)} terms; 5 self-study video lessons.')
+print(f'Built {len(PAGES)} material pages, {len(CHAPTERS)} chapter pages, 4 navigation, sources and glossary pages; {len(GLOSSARY)} terms; 5 self-study video lessons.')

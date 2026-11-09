@@ -17,9 +17,11 @@ class Inspect(HTMLParser):
   if a.get('data-anchor'):self.anchors[self.lang].append(a['data-anchor'])
   if tag=='meta'and a.get('name')=='referrer'and a.get('content')=='no-referrer':self.meta=True
   if 'answer'in a.get('class','').split():self.answers+=1
+rendered_videos=[]
 errors=[];pages=list(ROOT.rglob('*.html'));pages=[p for p in pages if 'dist'not in p.parts]
 for p in pages:
  parser=Inspect();parser.feed(p.read_text())
+ rendered_videos.extend(id.removeprefix('video-').removesuffix('-da') for id in parser.ids if id.startswith('video-') and id.endswith('-da'))
  if parser.panels!=['da','en','pt']:errors.append(f'{p}: missing language panels')
  if len(parser.ids)!=len(set(parser.ids)):errors.append(f'{p}: duplicate ids')
  if not parser.meta:errors.append(f'{p}: referrer policy missing')
@@ -35,7 +37,7 @@ for p in pages:
 manifest=json.loads((ROOT/'sources/manifest.json').read_text())
 assert len(manifest)==len(PAGES)==20
 for m in manifest:assert(ROOT/m['page']).is_file()and(ROOT/m['asset']).is_file()
-assert len(VIDEOS)==5
+assert len(VIDEOS)==5 and sorted(rendered_videos)==sorted(VIDEOS)
 assert 45+95+120+40+150+50+40+20+10==570
 assert 8000+14500+4200+3500+250+150+350+200+800+2750==34700
 assert (56700+9750+500)*.1==6695
