@@ -45,7 +45,7 @@
     a.addEventListener('click',e=>{e.preventDefault();const target=handbookTarget(anchor);if(!target)return;history.pushState(null,'','#'+encodeURIComponent(target.id));closeSidebar();window.scrollTo({top:Math.max(0,window.scrollY+target.getBoundingClientRect().top-115),behavior:'instant'});markHandbookChapter();});nav.append(a);
    }
    // The old bottom link points to logistics, which is irrelevant inside the handbook.
-   const bottomBook=sidebarBottom?.querySelector('a[href$="logistik/index.html"]');
+   const bottomBook=sidebarBottom?.querySelector('a[href="#"], a[href$="logistik/index.html"]');
    if(bottomBook){bottomBook.href='#';bottomBook.replaceChildren(...localizedText(['Indholdsfortegnelse','Table of contents','Índice']));bottomBook.addEventListener('click',e=>{e.preventDefault();history.replaceState(null,'',location.pathname+location.search);window.scrollTo({top:0,behavior:'instant'});closeSidebar();});}
    sidebarBottom?.querySelector('[data-progress-chapter]')?.setAttribute('data-progress-chapter','0');
    let scheduled=false;window.addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(()=>{scheduled=false;markHandbookChapter();});}},{passive:true});
