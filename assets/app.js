@@ -25,6 +25,45 @@
  $$('[data-set-lang]').forEach(el=>el.addEventListener('click',()=>setLang(el.dataset.setLang)));
  $('.menu-toggle')?.addEventListener('click',()=>{const open=$('.sidebar').classList.toggle('open');$('.menu-toggle').setAttribute('aria-expanded',String(open));});
  const page=document.body.dataset.page;
+ // The side navigation belongs to the current book, not the entire library.
+ const nav=$('#sidebar nav'), sidebarLabel=$('#sidebar .sidebar-label'), sidebarBottom=$('#sidebar .sidebar-bottom');
+ const isHandbook=page.startsWith('programme/'), isLogistics=page.startsWith('logistik/');
+ const bookLabels={programme:['Elevmappe · IKEA Logistik 2026','Apprenticeship handbook · IKEA Logistics 2026','Guia de formação · IKEA Logística 2026'],logistik:['Logistik · første skoleophold','Logistics · first school period','Logística · primeira etapa escolar']};
+ function localizedText(values){return values.map((value,i)=>{const label=document.createElement('span');label.dataset.uiLang=langs[i];label.hidden=langs[i]!==lang;label.textContent=value;return label;});}
+ function navLink(number,labels,href){const a=document.createElement('a'),n=document.createElement('span');a.href=href;n.className='nav-number';n.textContent=number;a.append(n,...localizedText(labels));return a;}
+ function closeSidebar(){if($('.sidebar')?.classList.contains('open')){$('.sidebar').classList.remove('open');$('.menu-toggle')?.setAttribute('aria-expanded','false');}}
+ function handbookTarget(anchor){return document.getElementById(anchor+'-'+lang);}
+ function markHandbookChapter(){if(!isHandbook||!nav)return;const links=$$('[data-book-anchor]',nav);let active=links[0];for(const a of links){const section=handbookTarget(a.dataset.bookAnchor);if(section&&section.getBoundingClientRect().top<=150)active=a;else break;}for(const a of links){const selected=a===active;a.classList.toggle('active',selected);if(selected)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');}}
+ if(nav){
+  if(isHandbook){
+   sidebarLabel.replaceChildren(...localizedText(bookLabels.programme));
+   nav.replaceChildren();
+   const topSections=$$('.lang-panel[data-lang="da"] .handbook-level-1');
+   for(const [i,section] of topSections.entries()){
+    const anchor=section.dataset.anchor,labels=langs.map(l=>document.getElementById(anchor+'-'+l)?.querySelector('h2')?.textContent.replace(/^\d+\.\s*/,'')||'');
+    const a=navLink(String(i+1).padStart(2,'0'),labels,'#'+anchor+'-'+lang);a.dataset.bookAnchor=anchor;
+    a.addEventListener('click',e=>{e.preventDefault();const target=handbookTarget(anchor);if(!target)return;history.pushState(null,'','#'+encodeURIComponent(target.id));closeSidebar();window.scrollTo({top:Math.max(0,window.scrollY+target.getBoundingClientRect().top-115),behavior:'instant'});markHandbookChapter();});nav.append(a);
+   }
+   // The old bottom link points to logistics, which is irrelevant inside the handbook.
+   const bottomBook=sidebarBottom?.querySelector('a[href$="logistik/index.html"]');
+   if(bottomBook){bottomBook.href='#';bottomBook.replaceChildren(...localizedText(['Indholdsfortegnelse','Table of contents','Índice']));bottomBook.addEventListener('click',e=>{e.preventDefault();history.replaceState(null,'',location.pathname+location.search);window.scrollTo({top:0,behavior:'instant'});closeSidebar();});}
+   sidebarBottom?.querySelector('[data-progress-chapter]')?.setAttribute('data-progress-chapter','0');
+   let scheduled=false;window.addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(()=>{scheduled=false;markHandbookChapter();});}},{passive:true});
+   document.addEventListener('elev:language',()=>{for(const a of $$('[data-book-anchor]',nav))a.href='#'+a.dataset.bookAnchor+'-'+lang;requestAnimationFrame(markHandbookChapter);});
+   const jumpToHash=()=>{let hash;try{hash=decodeURIComponent(location.hash.slice(1));}catch{return;}if(!hash)return;const anchor=hash.replace(/-(da|en|pt)$/,'');const target=handbookTarget(anchor);if(target){if(hash!==target.id)history.replaceState(null,'','#'+encodeURIComponent(target.id));window.scrollTo({top:Math.max(0,window.scrollY+target.getBoundingClientRect().top-115),behavior:'instant'});markHandbookChapter();}};
+   window.addEventListener('hashchange',jumpToHash);window.addEventListener('popstate',jumpToHash);
+   if(location.hash)requestAnimationFrame(jumpToHash);
+  }else if(isLogistics){
+   sidebarLabel.replaceChildren(...localizedText(bookLabels.logistik));
+   $$('a[href*="programme/"]',nav).forEach(a=>a.remove());
+  }else{
+   sidebarLabel.replaceChildren(...localizedText(['Alle materialer','All materials','Todos os materiais']));
+   const root=document.body.dataset.root||'';
+   nav.replaceChildren(navLink('01',bookLabels.programme,root+'programme/index.html'),navLink('02',bookLabels.logistik,root+'logistik/index.html'));
+   sidebarBottom?.querySelector('a[href$="logistik/index.html"]')?.remove();
+  }
+ }
+
  function updateComplete(el){const done=read('read:'+el.dataset.page,false);el.setAttribute('aria-pressed',String(done));el.textContent=done?'✓ '+i18n[lang].undone:i18n[lang].done;}
  $$('.complete').forEach(el=>el.addEventListener('click',()=>{write('read:'+el.dataset.page,!read('read:'+el.dataset.page,false));$$('.complete').forEach(updateComplete);updateProgress();}));
  function updateProgress(){const all=window.ELEV_INDEX||[];$$('[data-progress-chapter]').forEach(el=>{const c=el.dataset.progressChapter,items=all.filter(p=>c==='all'||p.chapter===Number(c));const n=items.filter(p=>read('read:'+p.path,false)).length;const percent=items.length?Math.round(n/items.length*100):0;el.style.width=percent+'%';el.title=`${n} / ${items.length}`;});}
