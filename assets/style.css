@@ -3,3 +3,6 @@
 .diagram-scroll{overflow:auto}.diagram-scroll svg{display:block;width:100%;min-width:600px;height:auto}.study-section figcaption{font-size:12px;color:var(--muted);line-height:1.6}.study-section figure{margin-inline:0}
 
 .folio{touch-action:manipulation}
+/* Responsive handbook: preserve source tables and figures without fixed page breaks. */
+.handbook-toc-2{padding-left:1.2rem}.handbook-level-1{border-top:3px solid var(--teal)}.handbook-level-2{margin-left:12px}.handbook-original img{max-width:100%;height:auto!important;object-fit:contain;vertical-align:middle}.handbook-original table{min-width:420px}.handbook-original td,.handbook-original th{border:1px solid var(--line)}.handbook-original td p{margin:4px 0}.handbook-original p:empty{display:none}.handbook-guide{padding:12px 16px;background:var(--mint);border-radius:8px}.handbook-original{overflow-wrap:anywhere}.handbook-original a{overflow-wrap:anywhere}
+@media(max-width:800px){.handbook-level-2{margin-left:0}}
